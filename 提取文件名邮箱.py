@@ -2,9 +2,9 @@ import re
 import sys
 import os,glob
 
-# 定义目录：目录下有多个文件需要处理
-path = 'D:\\下载\\Telegram Desktop\\accounts\\accounts'
-# 定义输出文件
+# 定义目录：目录下有多个文件需要处理，为 accounts 目录的路径，例如： path = 'D://AutoRclone//accounts'
+path = 'path//to//your//accounts'
+# 定义输出文件，路径可自定义，例如 fout = open("D://AutoRclone//accounts//res.txt", 'w')
 fout = open("res.txt", 'w')
 
 os.chdir(path)
@@ -31,16 +31,7 @@ for filename in os.listdir() :
             fout.write(mylist_2[1] + '\n')
 fout.write('\n')
 fout.close()
-'''
-fh = open('D:\\下载\\Telegram Desktop\\accounts\\accounts\\00bdf07c476792985eeb9bf69ef5f154669e845f.json')
-for line in fh.readlines() :
-    if line != "}" :
-        mylist = line.split(":")
-        if mylist[0] == "  \"client_email\"" :
-            #print(mylist[1])
-            mylist_2 = mylist[1].split("\"")
-            print(mylist_2[1])
-'''
+
 
         
         
